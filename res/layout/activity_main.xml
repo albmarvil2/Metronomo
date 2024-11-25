@@ -1,0 +1,158 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/geometry2"
+    android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutRadiusFiguras"
+            android:layout_width="match_parent"
+            android:layout_height="83dp" >
+
+            <RadioButton
+                android:id="@+id/negra"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="14dp"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/corchea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/negra"
+                android:checked="false" />
+
+            <RadioButton
+                android:id="@+id/triplete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="50dp"
+                android:layout_toRightOf="@+id/corchea"
+                android:checked="false" />
+
+            <ImageView
+                android:id="@+id/imageNegra"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignBottom="@+id/negra"
+                android:layout_toRightOf="@+id/negra"
+                android:contentDescription="@string/negraDescription"
+                android:maxHeight="30dp"
+                android:maxWidth="30dp"
+                android:src="@drawable/negra" />
+
+            <ImageView
+                android:id="@+id/ImageCorchea"
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/corchea"
+                android:layout_toRightOf="@+id/corchea"
+                android:contentDescription="@string/corcheaDescription"
+                android:maxHeight="30dp"
+                android:maxWidth="30dp"
+                android:src="@drawable/corchea" />
+
+            <ImageView
+                android:id="@+id/ImageTriplete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignBottom="@+id/triplete"
+                android:layout_toRightOf="@+id/triplete"
+                android:contentDescription="@string/tripleteDescription"
+                android:maxHeight="30dp"
+                android:maxWidth="30dp"
+                android:src="@drawable/triplet" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutTempoSelector"
+            android:layout_width="wrap_content"
+            android:layout_height="116dp" >
+
+            <SeekBar
+                android:id="@+id/seekBarTempo"
+                android:layout_width="310dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="25dp" />
+
+            <TextView
+                android:id="@+id/tempo"
+                android:layout_width="72dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:ems="10"
+                android:gravity="center"
+                android:textSize="25sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutBeatSoundSelector"
+            android:layout_width="match_parent"
+            android:layout_height="169dp" >
+
+            <TextView
+                android:id="@+id/labelSonidos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/labelBeat"
+                android:layout_alignBottom="@+id/labelBeat"
+                android:layout_alignLeft="@+id/spinnerSonidos"
+                android:gravity="center"
+                android:text="@string/label_sonidos"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Spinner
+                android:id="@+id/spinnerSonidos"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/beatPicker"
+                android:layout_marginRight="50dp" />
+
+            <NumberPicker
+                android:id="@+id/beatPicker"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_alignLeft="@+id/labelBeat"
+                android:layout_below="@+id/labelBeat"
+                android:layout_marginTop="14dp" />
+
+            <TextView
+                android:id="@+id/labelBeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="59dp"
+                android:layout_marginTop="22dp"
+                android:gravity="center"
+                android:text="@string/label_beat"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayoutPlayButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/playButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/playDescription"
+                android:onClick="playPause"
+                android:src="@drawable/play" />
+        </RelativeLayout>
+    </LinearLayout>

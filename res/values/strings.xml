@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Metrónomo</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tempo">Introduzca el tempo</string>
+    <string name="play">Play!</string>
+    <string name="stop">stop</string>
+    <string name="figura">Figura: </string>
+    <string-array name="Sonidos">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+    </string-array>
+    <string name="label_sonidos">Sonido</string>
+    <string name="label_beat">Beats</string>
+    <string-array name="Beats">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+    </string-array>
+        <string name="negraDescription">Imagen equivalente a una figura conocida como &quot;Negra&quot;</string>
+        <string name="corcheaDescription">Imagen equivalente a una figura conocida como &quot;corchea&quot;</string>
+        <string name="tripleteDescription">Imagen de una figura conocida como&quot;Triplete&quot;</string>
+        <string name="playDescription">imagen para el botón play</string>
+
+</resources>
